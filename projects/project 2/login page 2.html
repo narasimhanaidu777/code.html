@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            text-align: center;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url(back.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .email{
+
+        }
+        form{
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 5px 9px 15px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+        }
+        .form-group{
+            text-align: center;
+            line-height: 3;
+
+        }
+        .btn{
+            height: 35px;
+            width: 200px;
+            background-color: aqua;
+            padding: 10px;
+            border-radius: 5px;
+            color:black;
+            font-family: monospace;
+        }
+
+
+        
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <form action="submit" style="line-height: 1;">
+            <h2>Login</h2>
+            <div class="form-group">
+                <label for="email">Email</label>
+            <input type="email" placeholder="Enter your Email">
+            </div>
+            <div class="form-group">
+                <label for="password" placeholder="password">password</label>
+            <input type="password">
+
+            </div>
+            
+            
+            
+            <button class="btn">Login</button>
+            <p>Don't have an account?<a href="sign up">Sign up</a></p>
+        </form>
+    </header>
+</body>
+</html>
