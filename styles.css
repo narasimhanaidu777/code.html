@@ -70,7 +70,7 @@ h1{
 }
 .submit:hover{
     color: white;
-    background-color:#058af7 ;
+    background-color:#0800fb ;
 }
 .submit{
     height: 40px;
@@ -108,6 +108,10 @@ border-radius: 50%;
 cursor: pointer;
 background-color: #2196f3;
 border-color: black;
+}
+#top:hover{
+    color: aliceblue;
+    background-color: #0800fb;
 }
 
 
