@@ -4,38 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header style="color: rgb(11, 30, 239); background-color: aqua;">
+<header >
 <h1>Welcome to my portfolio</h1>
 
-<a href="">
-    <button style="">
-        About
-    </button>
-</a>
-<a href="">
-    <button>
-        Skills
-    </button>
-</a>
-<a href="">
-    <button style="color: blue;">
-        Projects
-    </button>
-</a>
-<a href="">
-    <button>
-        Contact
-    </button>
-</a>
+<div>
+    <a href="#about">
+        <button class="button">
+            About
+        </button>
+    </a>
+    <a href="#skills">
+        <button class="button">
+            Skills
+        </button>
+    </a>
+    <a href="#projects">
+        <button class="button">
+            Projects
+        </button>
+    </a>
+    <a href="#contact">
+        <button class="button">
+            Contact
+        </button>
+    </a>
+
+</div>
+
+
 </header>
 
 <main>
 
-    <section id="about" style="color: brown;">
-        <h1 style="font-style:italic; color: rgba(249, 3, 3, 0.919);">Narasimha Naidu</h1>
-        <img src="my photo.jpg"  width="300" height="200" alt="A Photo of Me">
+    <section id="about" style="color: black;">
+        <h1 >Narasimha Naidu</h1>
+        <img src="my photo.jpg"   alt="A Photo of Me">
         
             <p>I am passionate about web developmer with a focus on front end technologies.
         
@@ -56,7 +62,7 @@
         </ol>
     </section>
 
-    <section id="Projects">
+    <section id="projects">
         <h1>My Projects</h1>
         <table border="1" >
             <tr>
@@ -81,35 +87,49 @@
         <h1>Concact Me</h1>
         <p>Feel Free to get in touch with me using the form below :</p>
         <form>
-            <label type="name">Name:</label>
-            <input placeholder="Enter your Name" type="text"><br><br>
-    <label type="email">Email:</label>
-    <input placeholder="Enter your Email" type="email"><br><br>
-    
-    <b>Chose your Gender:</b>
-    <input type="radio" id="male" value="male">
-    <label type="male">Male</label>
-    <input type="radio" id="Female" value="female">
-    <label type="female">Female</label>
-    
-    <br><br>
-    <b>select your intreast</b>
-    <input type="checkbox" id="coading" value="coading">
-    <label for="coading">Coading</label>
-    <input type="checkbox" id="Rading" value="Reading">
-    <Label type="Reading">Reading</Label>
-    
-    <br><br>
-    <label for="bio">Bio(up to 200 charaters):</label>
-    <input type="text">
-    <br>
-    <button type="submit">Submit</button>
-     </form>
+            <div>
+                <label type="name">Name:</label>
+              <input placeholder="Enter your Name" type="text">
+
+            </div>
+            <div>
+                <label type="email">Email:</label>
+                <input placeholder="Enter your Email" type="email">
+
+            </div>
+            <div>
+                <b>Chose your Gender:</b>
+                <input type="radio" id="male" value="male">
+                <label type="male">Male</label>
+               <input type="radio" id="Female" value="female">
+               <label type="female">Female</label>
+            </div>
+            <div>
+                <b>select your intreast</b>
+                 <input type="checkbox" id="coading" value="coading">
+                   <label for="coading">Coading</label>
+                 <input type="checkbox" id="Rading" value="Reading">
+                  <Label type="Reading">Reading</Label>
+
+            </div>
+            <div>
+                <label for="bio">Bio(up to 200 charaters):</label>
+               <input type="text">
+
+            </div>
+            <div>
+                <button type="submit" class="submit">Submit</button>
+            </div>
+        </form>
     </section>
     
 </main>
-<footer>
+<a href="">
+    <button  class="submit" id="top">TOP</button>
+</a>
 
+<footer>
+<p>@ my portfolio 2025</p>
 </footer>
  
 
