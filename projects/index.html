@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", serif;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    align-items: center;
+    cursor: pointer;
+}
+.nav h1{
+    font-family: "Pacifico", serif;
+    font-size: clamp(18px,4vw,28px);
+}
+.nav ul{
+    display: flex;
+
+}
+.nav ul li{
+    list-style-type: none;
+    padding:  10px 20px;
+    display: inline;
+    border-radius: 5px;
+}
+li a{
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+    background: #e5f89c;
+    padding: 10px 20px;
+    border-radius: 5px;
+   
+}
+ .nav ul li:hover{
+    background: #e5f89c;
+   
+}
+
+
+.matter h1{
+  
+    font-weight:  300;
+    font-size: clamp(40px, 5vw, 90px);
+    width: clamp(250px, 50vw, 600px);
+    margin-bottom: 60px;
+    margin: 30px;
+
+}
+ 
+.main{
+
+    display: flex;
+    margin: 30px ;
+    gap: 20px; /* gap between img and matter */
+
+}
+ .main .img-box{
+    background: url(/mainimg.jpg);
+    background-position:center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 76%;
+
+}
+  .main .middle {
+    height: 400px;
+    width: 24%;
+    background: #e5f89c;
+    position: relative;
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.main-matter h2{
+   font-weight: 500;
+   font-size: 40px;
+}
+ .middle img{
+ width: 60px;
+}
+
+
+.nav2{
+    width: 180px;
+    height: 60px;
+    align-items: center;
+    display: flex;
+    margin: 30px ;
+}
+.nav2 .but{
+    display: flex;
+    gap: 30px;
+    padding: 20px 10px;
+    background:#ecedeb;
+    margin-right: 236.5px ;
+   
+}
+.nav2 h6,h5{
+    font-size: 20px;
+    font-weight: 500;
+    
+}
+.bottom-matter{
+    display: flex;
+}
+.paragraph{
+    font-size: 35px;
+    width:74%;
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}      
+.bottom-matter h1, h6{
+font-weight: 500;
+
+}
+ .img-box2{
+    background: url(/img1_n.jpg);
+    background-position:center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 24%;
+    height: 500px; 
+    margin: 30px;
+    margin-right: 10px;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav3 ul{
+    display: flex;
+    list-style-type: none; 
+}
+.nav3 li{
+    padding: 20px;
+    cursor: pointer;
+    
+}
+.h66{
+    font-size: 20px;
+    margin: 30px;
+
+}
+
+/* ------------------------------------ responsive Ness ----------------------------------- */
+
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <h1>Leevi</h1>
+        <ul>
+            <li>Work</li>
+            <li>Blog</li>
+            <li>Contact</li>
+            <li> <a href="">Button</a></li>
+        </ul>
+    </div>
+
+
+
+
+
+
+    <div class="matter">
+        <h1>Berlin based Nature studio.</h1>
+    </div>
+
+
+
+
+    <div class="main">
+       <div class="img-box">
+        <img src="WhatsApp Image 2025-02-11 at 16.40.21_2fa0bb09.jpg" alt="">
+       
+       </div>
+
+       
+        <div class="middle">
+         
+            <img src="star.jpg" alt="here is an image">
+             
+            <div class="main-matter">
+                <h6 class="about">About</h6>
+            <h2>Innovative ideas in the centre of the Berline.</h2>  
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="nav2">
+
+      <div class="but">
+        <h6>Clients</h6>
+        <h5>160+</h5>
+      </div>
+
+      <div class="but">
+        <h6>Awards</h6>
+        <h5>20+</h5>
+      </div>
+
+      <div class="but">
+        <h6>Following</h6>
+        <h5>250K</h5>
+      </div>
+
+      <div class="but">
+        <h6>Shars</h6>
+        <h5>69%</h5>
+      </div>
+    </div>
+
+
+      <div class="bottom-matter">
+
+        <div class="paragraph">
+          <h1>We belive in nature products that inspire & connect people all around the world.</h1>
+        <h6>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias voluptates nulla velit iusto, laudantium explicabo cum maiores error animi veritatis sed quasi cupiditate, doloremque porro?</h6>
+        <h6>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam ducimus quaerat incidunt fugiat impedit eveniet necessitatibus, fuga ipsam voluptatum suscipit, iusto alias! Libero eum amet facilis totam? Voluptates sint porro, vel perferendis, neque laborum laudantium quisquam, aliquid tenetur incidunt veniam eaque praesentium omnis consequatur consectetur expedita minus quo magni? Reiciendis.</h6>
+        </div>
+    <div class="img-box2"></div>
+    <img src="plant.jpg" alt="">
+
+
+    </div>
+    <footer>
+        <div class="footer">
+            <h6 class="h66">@copyright 2025</h6>
+              <div class="nav">
+                <ul>
+                    <li>Mail</li>
+                    <li>posts</li>
+                    <li>Support</li>
+                    
+                </ul>
+
+                 </div>
+
+    </footer>
+
+
+
+</div>
+
+
+    
+</body>
+</html>
