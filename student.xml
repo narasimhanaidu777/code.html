@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Library XML Document -->
+
+<library xmlns:bk="http://books.com/schema">
+
+   <bk:book id="B101" category="Programming">
+        <title>XML Made Easy</title>
+        <author>John Doe</author>
+        <price>550</price>
+   </bk:book>
+
+   <bk:book id="B102" category="Web">
+        <title>HTML & CSS</title>
+        <author>Sara Lee</author>
+        <price>450</price>
+   </bk:book>
+
+</library>

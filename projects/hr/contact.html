@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact HR — ABC Corp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">ABC Corp — HR</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="policies.html">HR Policies</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="contact.html">Contact HR</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h2>Contact HR</h2>
+
+    <section class="form-card" aria-labelledby="contact">
+      <form id="contactForm" action="mailto:hr@abccorp.com" method="get" enctype="text/plain">
+        <div class="form-row">
+          <label for="name" class="kicker">Name</label>
+          <input id="name" name="Name" type="text" placeholder="Your full name">
+        </div>
+
+        <div class="form-row">
+          <label for="email" class="kicker">Email</label>
+          <input id="email" name="Email" type="email" placeholder="you@example.com">
+        </div>
+
+        <div class="form-row">
+          <label for="message" class="kicker">Message</label>
+          <textarea id="message" name="Message" rows="6" placeholder="How can HR help you?"></textarea>
+        </div>
+
+        <div class="form-row">
+          <button type="submit" class="btn">Send Message</button>
+        </div>
+      </form>
+      <p class="kv">Or email us directly at <a href="mailto:hr@abccorp.com">hr@abccorp.com</a></p>
+    </section>
+
+  </main>
+
+  <footer class="container" style="padding:1.5rem 0; color:#6b7280;">
+    <small>&copy; ABC Corp — Contact (demo)</small>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 16px 32px;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.search-bar {
+  flex: 1;
+  margin: 0 16px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.nav-right {
+  display: flex;
+  gap: 10px;
+}
+
+.login-btn {
+  background: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.lang-select {
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.carousel {
+  background: #e6f2ff;
+  padding: 30px;
+  text-align: center;
+}
+
+.carousel-item {
+  max-width: 600px;
+  margin: auto;
+}
+
+.carousel-item h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.progress {
+  height: 10px;
+  background: #ddd;
+  border-radius: 6px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.progress div {
+  height: 100%;
+  background: #007bff;
+}
+
+.progress.green div {
+  background: green;
+}
+
+.learn-btn {
+  background: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+.goal {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.nearby {
+  padding: 30px;
+}
+
+.cards {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.card {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #eee;
+  width: 30%;
+}
+
+.categories {
+  padding: 30px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.tabs button {
+  padding: 8px 16px;
+  border: none;
+  background: #eee;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background: #007bff;
+  color: white;
+}
+
+.causes {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.cause {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #eee;
+  width: 30%;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-bottom: 6px;
+  color: white;
+}
+
+.tag.red { background: #d9534f; }
+.tag.pink { background: #d63384; }
+.tag.orange { background: #fd7e14; }
+
+.impact {
+  background: #f0f8ff;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.impact-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.impact-box {
+  background: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 12px;
+  width: 200px;
+  box-shadow: 0 0 10px #ddd;
+}
+
+.quote {
+  margin-top: 20px;
+  font-style: italic;
+  color: #444;
+}
+
+footer {
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  color: #555;
+  font-size: 0.9rem;
+  border-top: 1px solid #ddd;
+}
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .tab-button {
+      padding: 10px 20px;
+      border: none;
+      background: #eee;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .tab-button.active {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .content-container {
+      display: none;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .content-container.active {
+      display: flex;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 6px;
+      color: white;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    .emergency { background-color: #d9534f; }
+    .health { background-color: #d63384; }
+    .education { background-color: #fd7e14; }
+    .event { background-color: #17a2b8; }
+    .fundraiser { background-color: #20c997; }
+    .volunteer { background-color: #6f42c1; }
+    .story { background-color: #ffc107; }
+
+    .progress-bar {
+      height: 8px;
+      border-radius: 5px;
+      background: #e0e0e0;
+      margin: 10px 0;
+      position: relative;
+    }
+
+    .progress-bar .progress {
+      background-color: #007bff;
+      height: 100%;
+      border-radius: 5px;
+    }
+
+    .goal-text {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .card h3 {
+      margin: 0 0 5px 0;
+    }
+
+    .card p {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    </style>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Next Heart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header class="navbar">
+    <div class="logo">💙 NEXT HEART</div>
+    <input type="text" placeholder="Search for initiatives, events, or causes..." class="search-bar" />
+    <div class="nav-right">
+      <button class="login-btn">Login</button>
+      <select class="lang-select">
+        <option>English</option>
+        <option>తెలుగు</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- Carousel -->
+  <section class="carousel">
+    <div class="carousel-item">
+      <h2>Clean Water for Rural Villages</h2>
+      <p>Providing clean drinking water access to 500+ families in remote villages.</p>
+      <div class="progress green">
+        <div style="width: 75%"></div>
+      </div>
+      <div class="goal">75% funded | Goal: ₹5,00,000</div>
+      <button class="learn-btn">Learn More →</button>
+    </div>
+  </section>
+
+  <!-- Nearby -->
+  <section class="nearby">
+    <h3>Near You</h3>
+    <div class="cards">
+      <div class="card">
+        <strong>Community Kitchen Volunteer Drive</strong>
+        <p>📍 Jubilee Hills Community Center</p>
+        <p>🟢 2.3 km away | ⏰ Tomorrow, 9 AM</p>
+      </div>
+      <div class="card">
+        <strong>Children’s Health Camp</strong>
+        <p>📍 Government School, Gachibowli</p>
+        <p>🟢 4.7 km away | ⏰ This Weekend</p>
+      </div>
+      <div class="card">
+        <strong>Tree Plantation Drive</strong>
+        <p>📍 Hussain Sagar Lake Area</p>
+        <p>🟢 6.1 km away | ⏰ Next Sunday, 6 AM</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Explore Categories -->
+  <body>
+
+    <h2>Explore Categories</h2>
+    
+    <div class="tabs">
+      <button class="tab-button active" onclick="showTab('causes')">Causes</button>
+      <button class="tab-button" onclick="showTab('events')">Events</button>
+      <button class="tab-button" onclick="showTab('fundraisers')">Fundraisers</button>
+      <button class="tab-button" onclick="showTab('volunteer')">Volunteer</button>
+      <button class="tab-button" onclick="showTab('stories')">Stories</button>
+    </div>
+    
+    <!-- CAUSES TAB -->
+    <div class="content-container active" id="causes">
+      <div class="card">
+        <span class="tag emergency">Emergency</span>
+        <h3>Disaster Relief Fund</h3>
+        <p>Emergency support for families affected by recent floods in coastal regions.</p>
+        <div class="progress-bar"><div class="progress" style="width: 65%;"></div></div>
+        <div class="goal-text">65% funded | Goal: ₹10,00,000</div>
+      </div>
+    
+      <div class="card">
+        <span class="tag health">Health</span>
+        <h3>Child Nutrition Program</h3>
+        <p>Combating malnutrition in rural schools through mid-day meal programs.</p>
+        <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+        <div class="goal-text">80% funded | Goal: ₹5,50,000</div>
+      </div>
+    
+      <div class="card">
+        <span class="tag education">Education</span>
+        <h3>Digital Literacy for Seniors</h3>
+        <p>Teaching elderly community members basic smartphone and internet skills.</p>
+        <div class="progress-bar"><div class="progress" style="width: 40%;"></div></div>
+        <div class="goal-text">40% funded | Goal: ₹2,00,000</div>
+      </div>
+    </div>
+    
+    <!-- EVENTS TAB -->
+    <div class="content-container" id="events">
+      <div class="card">
+        <span class="tag event">Event</span>
+        <h3>Tree Plantation Drive</h3>
+        <p>Join our mission to plant 5000 trees in urban areas and improve air quality.</p>
+        <div class="progress-bar"><div class="progress" style="width: 30%;"></div></div>
+        <div class="goal-text">30% funded | Goal: ₹1,00,000</div>
+      </div>
+    </div>
+    
+    <!-- FUNDRAISERS TAB -->
+    <div class="content-container" id="fundraisers">
+      <div class="card">
+        <span class="tag fundraiser">Fundraiser</span>
+        <h3>Support Cancer Treatment</h3>
+        <p>Help provide treatment for children battling cancer from low-income families.</p>
+        <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+        <div class="goal-text">70% funded | Goal: ₹8,00,000</div>
+      </div>
+    </div>
+    
+    <!-- VOLUNTEER TAB -->
+    <div class="content-container" id="volunteer">
+      <div class="card">
+        <span class="tag volunteer">Volunteer</span>
+        <h3>Teach in Villages</h3>
+        <p>Volunteer to teach basic subjects in underprivileged rural schools.</p>
+        <div class="progress-bar"><div class="progress" style="width: 55%;"></div></div>
+        <div class="goal-text">55% filled | Goal: 100 volunteers</div>
+      </div>
+    </div>
+    
+    <!-- STORIES TAB -->
+    <div class="content-container" id="stories">
+      <div class="card">
+        <span class="tag story">Story</span>
+        <h3>From Homeless to Hopeful</h3>
+        <p>Read how your donations helped a family rebuild their life after disaster.</p>
+        <div class="progress-bar"><div class="progress" style="width: 100%;"></div></div>
+        <div class="goal-text">Goal Achieved</div>
+      </div>
+    </div>
+    
+    <script>
+      function showTab(tabId) {
+        // Remove active class from all buttons
+        document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        event.target.classList.add('active');
+    
+        // Hide all content
+        document.querySelectorAll('.content-container').forEach(c => c.classList.remove('active'));
+    
+        // Show the selected tab content
+        document.getElementById(tabId).classList.add('active');
+      }
+    </script>
+
+  <!-- Live Impact -->
+  <section class="impact">
+    <h3>Live Impact</h3>
+    <div class="impact-cards">
+      <div class="impact-box">
+        <h4>₹2.4 Cr</h4>
+        <p>Total Funds Raised</p>
+      </div>
+      <div class="impact-box">
+        <h4>5,847</h4>
+        <p>Active Volunteers</p>
+      </div>
+      <div class="impact-box">
+        <h4>127</h4>
+        <p>Active Initiatives</p>
+      </div>
+      <div class="impact-box">
+        <h4>18,592</h4>
+        <p>Hearts Reached</p>
+      </div>
+    </div>
+    <p class="quote">"Every contribution counts - Together we're making a difference"</p>
+  </section>
+
+  <footer>
+    <p>© 2024 NEXT HEART - Reach the Next Heart in Need</p>
+    <p>Building stronger communities through compassion and action</p>
+  </footer>
+
+</body>
+</html>

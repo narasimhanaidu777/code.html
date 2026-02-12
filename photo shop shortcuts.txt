@@ -1,8 +1,0 @@
-v move tool
-b brush tool
-left bract to increase brush size
-right bracket to decrease brush
-t shortcut for text
-ctrl + space drag to zoom option
-ctrl + e to merge layers
-ctrl + t to adjust tool

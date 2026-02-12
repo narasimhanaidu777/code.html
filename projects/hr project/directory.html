@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Layout</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+    }
+
+    /* Header */
+    header {
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    header .logo {
+        font-size: 22px;
+        font-weight: bold;
+        color: #333;
+    }
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+        margin: 0;
+        padding: 0;
+    }
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+    }
+    nav ul li a:hover {
+        color: #007BFF;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: 80vh;
+        background: url('https://via.placeholder.com/1600x800') no-repeat center/cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: 48px;
+        margin-bottom: 15px;
+    }
+    .hero p {
+        font-size: 18px;
+        max-width: 600px;
+        margin: auto;
+    }
+    .btn {
+        margin-top: 20px;
+        background: #007BFF;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    .btn:hover {
+        background: #0056b3;
+    }
+
+    /* Cards Section */
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        padding: 50px;
+        background-color: white;
+    }
+    .card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+    .card img {
+        width: 100%;
+        border-radius: 10px;
+        height: 200px;
+        object-fit: cover;
+    }
+    .card h3 {
+        margin: 15px 0 10px;
+    }
+    .card p {
+        color: #666;
+        font-size: 14px;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">MyWebsite</div>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h1>Welcome to Our Website</h1>
+        <p>We provide the best solutions for your business needs. Let’s grow together.</p>
+        <a href="#" class="btn">Get Started</a>
+    </div>
+</section>
+
+<section class="cards">
+    <div class="card">
+        <img src="https://via.placeholder.com/400x200" alt="Service 1">
+        <h3>Service One</h3>
+        <p>High-quality service for your business growth.</p>
+    </div>
+    <div class="card">
+        <img src="https://via.placeholder.com/400x200" alt="Service 2">
+        <h3>Service Two</h3>
+        <p>Expert solutions tailored to your needs.</p>
+    </div>
+    <div class="card">
+        <img src="https://via.placeholder.com/400x200" alt="Service 3">
+        <h3>Service Three</h3>
+        <p>Innovative ideas to lead your business forward.</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

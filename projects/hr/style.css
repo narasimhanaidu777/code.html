@@ -1,0 +1,206 @@
+/* ===== style.css =====
+   Modern, responsive, CSS-only HR portal
+   Author: ChatGPT
+   Notes: No JavaScript used; keep CSS clean and commented.
+*/
+
+/* ---------- GLOBAL ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; } /* smooth scrolling without JS */
+body {
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial;
+  background: #f6f8fb;
+  color: #1f2937;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- LAYOUT CONTAINERS ---------- */
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* ---------- NAVIGATION (sticky) ---------- */
+nav {
+  background: linear-gradient(90deg,#0b4b8c,#073a6b);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 3px 10px rgba(2,6,23,0.08);
+}
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.brand {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+.nav-links a {
+  color: #f8fafc;
+  text-decoration: none;
+  padding: .4rem .8rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background .18s ease, transform .12s ease, color .18s;
+}
+.nav-links a:hover,
+.nav-links a:focus {
+  background: rgba(255,255,255,0.06);
+  transform: translateY(-2px);
+  color: #ffdd57;
+}
+
+/* ---------- HEADER / HERO ---------- */
+.header-hero {
+  background: linear-gradient(180deg, rgba(4, 39, 75, 0.75), rgba(4, 39, 75, 0.60)), url("images/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 4.5rem 1rem;
+  text-align: center;
+}
+.header-hero h1 {
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+  margin-bottom: .5rem;
+}
+.header-hero p {
+  opacity: .95;
+  max-width: 900px;
+  margin: 0.25rem auto 1rem;
+}
+
+/* ---------- CARDS ---------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.card {
+  background: #fff;
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(12,24,55,0.06);
+  transition: transform .18s ease, box-shadow .18s;
+  border: 1px solid rgba(12,24,55,0.03);
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(12,24,55,0.09);
+}
+.card h3 { color: #0b4b8c; margin-bottom: .5rem; }
+.card p, .card ul { color: #374151; font-size: .98rem; }
+
+/* small utility */
+.kv { color: #6b7280; font-size: .95rem; }
+
+/* ---------- BUTTONS ---------- */
+.btn {
+  display: inline-block;
+  background: linear-gradient(180deg,#0b4b8c,#073a6b);
+  color: #fff;
+  padding: .55rem .9rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s;
+}
+.btn:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(7, 58, 107, 0.18); }
+
+/* subtle secondary button */
+.btn-ghost {
+  background: transparent;
+  color: #0b4b8c;
+  border: 1px solid rgba(11,75,140,0.12);
+}
+
+/* ---------- TABLE (Directory) ---------- */
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 680px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(12,24,55,0.04);
+}
+thead th {
+  background: #0b4b8c;
+  color: #fff;
+  font-weight: 700;
+  text-align: left;
+  padding: .85rem 1rem;
+  font-size: .95rem;
+}
+tbody td {
+  padding: .9rem 1rem;
+  border-top: 1px solid #f1f5f9;
+  color: #374151;
+  font-size: .95rem;
+}
+tbody tr:hover td { background: #fbfdff; }
+
+/* ---------- FORM (Contact HR) ---------- */
+.form-card {
+  background: #fff;
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(12,24,55,0.04);
+}
+.form-row { margin-bottom: .85rem; }
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: .75rem;
+  border-radius: 8px;
+  border: 1px solid #e6eef8;
+  background: #fbfdff;
+  outline: none;
+  font-size: .98rem;
+  transition: box-shadow .12s ease, border-color .12s;
+}
+input:focus, textarea:focus { box-shadow: 0 6px 18px rgba(11,75,140,0.06); border-color: rgba(11,75,140,0.18); }
+
+/* ---------- TINY LAYOUT HELPERS ---------- */
+.row { display: flex; gap: 1rem; align-items: stretch; }
+.col-2 { flex: 2; }
+.col-1 { flex: 1; min-width: 220px; }
+.kicker { color: #6b7280; font-weight: 600; margin-bottom: .6rem; }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 992px) {
+  .card-grid { grid-template-columns: repeat(2, 1fr); }
+  .row { flex-direction: column; }
+}
+@media (max-width: 640px) {
+  .nav-inner { flex-direction: column; gap: .6rem; align-items: flex-start; }
+  .card-grid { grid-template-columns: 1fr; }
+  .header-hero { padding: 3rem 1rem; text-align: left; }
+  .header-hero h1 { font-size: 1.6rem; }
+  .brand { font-size: .98rem; }
+}
+
+/* ---------- ACCESSIBILITY ---------- */
+a:focus { outline: 3px solid rgba(11,75,140,0.18); outline-offset: 3px; border-radius: 6px; }
